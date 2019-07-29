@@ -1,0 +1,14 @@
+server:
+  port: 18001
+
+# 用来测试
+test.name: zhouzhou本地
+
+# kafka 消费组id
+spring.kafka.consumer.group-id: user
+
+# 数据库
+spring.datasource.url: jdbc:oracle:thin:@192.168.1.48:1521:orcl
+spring.datasource.username: user_dev
+spring.datasource.password: user_dev#E2w
+spring.datasource.show-sql: true

@@ -1,0 +1,25 @@
+logging:
+  level:
+    org.springframework.cloud.gateway: trace
+    org.springframework.http.server.reactive: info
+    org.springframework.web.reactive: info
+    reactor.ipc.netty: info
+
+# 路由配置
+zuul:
+  routes:
+    client-api:
+      path: /client-api/**
+      serviceId: client-api
+      retryable: true
+
+
+  sensitive-headers:
+  add-host-header: true
+  retryable: false
+  SendErrorFilter:
+    post:
+      disable: true
+  ErrorFilter:
+    post:
+      disable: true

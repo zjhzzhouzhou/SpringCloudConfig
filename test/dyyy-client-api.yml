@@ -1,0 +1,13 @@
+#哪些请求加入swagger api 都不想加入，设置一个不存在的路径。
+swagger:
+  paths: /user/.*,/aliPay/.*,/weChat/.*,/app/.*,/pay/.*,/reg/.*,/ord/.*
+
+#用来测试
+test:
+  name: zhouzhou测试
+
+server:
+  port: 16001
+
+# kafka 消费组id
+  spring.kafka.consumer.group-id: client
