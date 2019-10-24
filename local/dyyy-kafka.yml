@@ -4,8 +4,8 @@ spring:
   kafka:
     bootstrap-servers: 192.168.1.49:9092
     producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
       # 只需要 leader 许可
       acks: 1
       #重试次数.
@@ -16,5 +16,5 @@ spring:
       auto-offset-reset: latest
       enable-auto-commit: true
       #      auto-commit-interval: 10
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
