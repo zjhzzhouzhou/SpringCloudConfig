@@ -26,7 +26,7 @@ spring.datasource.filters: stat
 spring.datasource.connectionProperties: druid.stat.mergeSql: true;druid.stat.slowSqlMillis: 5000
 
   #PageHelperProperties
-pagehelper.helperDialect: Oracle
+pagehelper.helperDialect: Mysql
 pagehelper.autoDialect: true
   #通过该属性来设置是否关闭获取的这个连接
 pagehelper.closeConn: false
