@@ -1,0 +1,8 @@
+server:
+  port: 18001
+
+
+# kafka 消费组id
+spring.kafka.consumer.group-id: message
+
+# 数据库
