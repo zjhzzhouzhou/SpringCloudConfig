@@ -55,7 +55,7 @@ eureka:
     #是否将自己注册到eureka服务注册中心，默认为true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:17001/eureka-server/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@20.21.1.147:17001/eureka-server/eureka/
 
 
 
