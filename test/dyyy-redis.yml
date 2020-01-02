@@ -1,14 +1,22 @@
 
 # Redis settings
 ######## follow setting is hangzhou ##########
-
-redis.connectionTimeout: 2000
-redis.soTimeout: 2000
-redis.maxRedirections: 5
-redis.maxIdle: 300
-redis.maxActive: 600
-redis.maxWait: 1000
-redis.testOnBorrow: true
-
-redis.nodes : 192.168.1.49:6381,192.168.1.49:6382,192.168.1.49:6383,192.168.1.49:6384,192.168.1.49:6385,192.168.1.49:6386
-
+spring:
+  redis:
+    timeout: 6000ms
+    password:
+    cluster:
+      max-redirects: 3 # 获取失败 最大重定向次数
+      nodes:
+        - 192.168.1.49:6381
+        - 192.168.1.49:6382
+        - 192.168.1.49:6383
+        - 192.168.1.49:6384
+        - 192.168.1.49:6385
+        - 192.168.1.49:6386
+    lettuce:
+      pool:
+        max-active: 1000 #最大连接数（使用负值表示没有限制）
+        max-idle: 10 #最大空闲连接
+        min-idle: 5 #最新空闲连接
+        max-wait: -1 # 最大阻塞等待时间（使用负值表示没有限制）
