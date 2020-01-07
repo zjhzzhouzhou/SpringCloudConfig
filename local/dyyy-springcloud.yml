@@ -71,7 +71,7 @@ ribbon:
 feign:
   hystrix:
     # 打开feign的hystrix功能
-    enabled: false
+    enabled: true
   compression:
     # 开启压缩
     request:
